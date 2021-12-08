@@ -86,6 +86,13 @@
         protected static string Format(string message, params object[] others)
         {
             if (message == null || !message.Any()) return string.Empty;
+
+            if (message.Contains("{0}"))
+                return string.Format(message, others);
+
+            if (!others.Any())
+                return message;
+
             var othersList = others.ToList();
             othersList.Insert(0, message);
 
@@ -119,9 +126,9 @@
 
         private static byte[] StringToByteArray(string hex)
         {
-            var NumberChars = hex.Length;
-            var bytes = new byte[NumberChars / 2];
-            for (var i = 0; i < NumberChars; i += 2)
+            var numberChars = hex.Length;
+            var bytes = new byte[numberChars / 2];
+            for (var i = 0; i < numberChars; i += 2)
                 bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
             return bytes;
         }

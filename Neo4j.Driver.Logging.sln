@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo4j.Driver.Logging.ConsoleLogger", "Neo4j.Driver.Logging.ConsoleLogger\Neo4j.Driver.Logging.ConsoleLogger.csproj", "{BA6D19C9-9537-48AC-8F59-BCB6135926C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo4j.Driver.Logging.ConsoleLogger.Tests", "Neo4j.Driver.Logging.ConsoleLogger.Tests\Neo4j.Driver.Logging.ConsoleLogger.Tests.csproj", "{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neo4j.Driver.Logging.Common", "Neo4j.Driver.Logging.Common\Neo4j.Driver.Logging.Common.csproj", "{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{8449AC1E-745A-437E-A18D-DEE75D87158D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleLogger", "ConsoleLogger", "{4F05571F-5CC8-4CF0-91DD-B434E165DEC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5372BA6-6980-43CF-B0E0-9FE60B0B8D20}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA6D19C9-9537-48AC-8F59-BCB6135926C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA6D19C9-9537-48AC-8F59-BCB6135926C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA6D19C9-9537-48AC-8F59-BCB6135926C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA6D19C9-9537-48AC-8F59-BCB6135926C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA6D19C9-9537-48AC-8F59-BCB6135926C0} = {4F05571F-5CC8-4CF0-91DD-B434E165DEC7}
+		{FFEC1BB0-FCA9-462C-86E0-D72B995F5A78} = {8449AC1E-745A-437E-A18D-DEE75D87158D}
+		{8E4B9AB8-FBD5-4ADC-AA0C-F949CF29E3B5} = {8449AC1E-745A-437E-A18D-DEE75D87158D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9495DAF-5876-4B07-B0B9-8BDE318266A7}
+	EndGlobalSection
+EndGlobal

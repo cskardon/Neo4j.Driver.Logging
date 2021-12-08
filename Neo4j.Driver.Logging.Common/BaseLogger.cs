@@ -93,44 +93,7 @@
             if (!others.Any())
                 return message;
 
-            var othersList = others.ToList();
-            othersList.Insert(0, message);
-
-            return string.Join(Environment.NewLine, othersList.Select(Format));
-        }
-
-        private static string Format(object obj)
-        {
-            if (obj == null) return string.Empty;
-            if (obj is string)
-            {
-                var output = obj.ToString();
-                if (output != null && (output.EndsWith("00 00") || output.EndsWith("00 03")))
-                    return FormatByteArray(output);
-                
-                return output;
-            }
-
-            if (obj is IEnumerable enumerable)
-                return string.Join(",", enumerable.Cast<object>().Select(o => o == null ? string.Empty : o.ToString()));
-
-            return obj.ToString();
-        }
-
-        private static string FormatByteArray(string input)
-        {
-            var hex = string.Join("", input.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-            var bytes = StringToByteArray(hex);
-            return Encoding.UTF8.GetString(bytes);
-        }
-
-        private static byte[] StringToByteArray(string hex)
-        {
-            var numberChars = hex.Length;
-            var bytes = new byte[numberChars / 2];
-            for (var i = 0; i < numberChars; i += 2)
-                bytes[i / 2] = Convert.ToByte(hex.Substring(i, 2), 16);
-            return bytes;
+            return $"Unable to parse message:: {message}";
         }
     }
 }

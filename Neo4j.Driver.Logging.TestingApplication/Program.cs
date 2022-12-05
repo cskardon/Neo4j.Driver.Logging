@@ -16,7 +16,7 @@ namespace Neo4j.Driver.Logging.TestingApplication
                 cfg => cfg.WithLogger(new ConsoleLogger(LogLevel.Trace)));
 
             var session = driver.AsyncSession(cfg => cfg.WithDatabase("neo4j"));
-            var result = await session.ReadTransactionAsync(async tx =>
+            var result = await session.ExecuteReadAsync(async tx =>
             {
                 var cursor = await tx.RunAsync("MATCH (n) RETURN COUNT(n)");
                 if (await cursor.FetchAsync())

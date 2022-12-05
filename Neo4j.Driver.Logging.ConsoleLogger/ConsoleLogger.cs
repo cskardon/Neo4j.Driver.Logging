@@ -6,7 +6,7 @@
     /// <summary>
     /// Logs messages from the <see cref="Neo4j.Driver"/> to the Console.
     /// </summary>
-    public class ConsoleLogger : BaseLogger
+    public class ConsoleLogger : BaseLogger, ILogger
     {
         /// <summary>
         /// Create a new instance of a the <see cref="ConsoleLogger"/>.
